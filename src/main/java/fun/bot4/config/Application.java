@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("fun.bot4.service.**")
+@ComponentScan("fun.bot4.**")
 @SpringBootApplication
 public class Application {
 

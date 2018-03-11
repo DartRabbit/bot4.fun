@@ -57,9 +57,9 @@ public class JpaConfig implements TransactionManagementConfigurer {
     entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
     Properties jpaProperties = new Properties();
-    jpaProperties.put(org.hibernate.cfg.Environment.DIALECT, dialect);
-    jpaProperties.put(org.hibernate.cfg.Environment.HBM2DDL_AUTO, hbm2ddlAuto);
-    jpaProperties.put(org.hibernate.cfg.Environment.SHOW_SQL, show_sql);
+    jpaProperties.put(Environment.DIALECT, dialect);
+    jpaProperties.put(Environment.HBM2DDL_AUTO, hbm2ddlAuto);
+    jpaProperties.put(Environment.SHOW_SQL, show_sql);
     jpaProperties.put(Environment.NON_CONTEXTUAL_LOB_CREATION, lob_non_contextual_creation);
     entityManagerFactoryBean.setJpaProperties(jpaProperties);
 
