@@ -25,7 +25,7 @@
     <logback.version>1.2.3</logback.version>
     <slf4j.version>1.7.25</slf4j.version>
 
-    <start-class>fun.bot4.config.Application</start-class>
+    <start-class>fun.bot4.Application</start-class>
   </properties>
 
   <parent>
@@ -93,6 +93,7 @@
       <artifactId>spring-security-test</artifactId>
       <scope>test</scope>
     </dependency>
+
 
     <!--Bots API-->
     <!--Telegram-->
