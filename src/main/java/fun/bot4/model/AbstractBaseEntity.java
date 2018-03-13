@@ -1,6 +1,5 @@
 package fun.bot4.model;
 
-import fun.bot4.HasId;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.GeneratedValue;

@@ -12,8 +12,8 @@ public enum BotType {
 
   static {
     Map<Integer, BotType> mapCodes = new HashMap<>();
-    for(BotType item: values()){
-      mapCodes.put(item.code(),item);
+    for (BotType item : values()) {
+      mapCodes.put(item.code(), item);
     }
     CODES_MAP = ImmutableMap.copyOf(mapCodes);
   }
@@ -30,7 +30,7 @@ public enum BotType {
     return value;
   }
 
-  public int code(){
+  public int code() {
     return code;
   }
 

@@ -1,4 +1,4 @@
-package fun.bot4;
+package fun.bot4.model;
 
 public interface HasId {
 
