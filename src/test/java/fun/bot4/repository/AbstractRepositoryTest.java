@@ -14,9 +14,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {Application.class})
+//@SpringBootTest(classes = {Application.class})
 //@DataJpaTest
-//@ContextConfiguration({"classpath:spring/app-config.xml","classpath:spring/db-config.xml"})
+@ContextConfiguration({"classpath:spring/app-config.xml","classpath:spring/db-config.xml"})
 @Sql(scripts = "classpath:db/db_populate.sql", config = @SqlConfig(encoding = "UTF-8"))
 abstract public class AbstractRepositoryTest {
 
