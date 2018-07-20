@@ -30,5 +30,4 @@ public interface BotRepository extends JpaRepository<Bot, Integer> {
   int countAllByCreatedBetween(LocalDateTime start, LocalDateTime end);
 
   int countAllByUser(User user);
-
 }

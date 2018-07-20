@@ -3,12 +3,11 @@ package fun.bot4.config.quartz;
 import fun.bot4.job.BotStartJob;
 import java.io.IOException;
 import java.util.Properties;
+import lombok.extern.slf4j.Slf4j;
 import org.quartz.JobDetail;
 import org.quartz.SimpleTrigger;
 import org.quartz.Trigger;
 import org.quartz.spi.JobFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.PropertiesFactoryBean;
@@ -23,9 +22,8 @@ import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
 
 @Configuration
 @ConditionalOnProperty(name = "quartz.enabled")
+@Slf4j
 public class QuartzConfig {
-
-  private static final Logger LOG = LoggerFactory.getLogger(QuartzConfig.class);
 
   @Bean
   public JobFactory jobFactory(ApplicationContext applicationContext) {
@@ -41,7 +39,7 @@ public class QuartzConfig {
     factory.setJobFactory(jobFactory);
     factory.setQuartzProperties(quartzProperties());
     factory.setTriggers(simpleJobTrigger);
-    LOG.info("starting jobs....");
+    log.info("starting jobs....");
     return factory;
   }
 
@@ -49,7 +47,7 @@ public class QuartzConfig {
   public SimpleTriggerFactoryBean simpleJobTrigger(
       @Qualifier("simpleJobDetail") JobDetail jobDetail,
       @Value("${simplejob.frequency}") long frequency) {
-    LOG.info("simpleJobTrigger");
+    log.info("simpleJobTrigger");
 
     SimpleTriggerFactoryBean factoryBean = new SimpleTriggerFactoryBean();
     factoryBean.setJobDetail(jobDetail);

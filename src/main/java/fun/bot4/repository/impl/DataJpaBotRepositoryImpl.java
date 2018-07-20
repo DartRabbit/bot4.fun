@@ -5,6 +5,7 @@ import fun.bot4.model.user.User;
 import fun.bot4.repository.BotRepository;
 import fun.bot4.repository.UserRepository;
 import java.time.LocalDateTime;
+import java.util.List;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,6 +45,10 @@ public class DataJpaBotRepositoryImpl {
 
   public Bot getByName(String name, int userId) {
     return botRepository.getByNameAndUserId(name, userId);
+  }
+
+  public List<Bot> getAll() {
+    return botRepository.findAll();
   }
 
   public int getCountByUser(User user) {

@@ -25,8 +25,8 @@
   />
 
   <!--<jdbc:initialize-database data-source="dataSource" enabled="true">-->
-    <!--<jdbc:script encoding="UTF-8" location="classpath:db/db_init.sql"/>-->
-    <!--<jdbc:script encoding="UTF-8" location="classpath:db/db_populate.sql"/>-->
+  <!--<jdbc:script encoding="UTF-8" location="classpath:db/db_init.sql"/>-->
+  <!--<jdbc:script encoding="UTF-8" location="classpath:db/db_populate.sql"/>-->
   <!--</jdbc:initialize-database>-->
 
   <bean id="entityManagerFactory"
@@ -41,7 +41,7 @@
         <entry key="#{T(org.hibernate.cfg.AvailableSettings).USE_SQL_COMMENTS}"
           value="${hibernate.use_sql_comments}"/>
         <entry key="#{T(org.hibernate.cfg.AvailableSettings).NON_CONTEXTUAL_LOB_CREATION}"
-        value="${hibernate.jdbc.lob.non_contextual_creation}"/>
+          value="${hibernate.jdbc.lob.non_contextual_creation}"/>
       </map>
     </property>
 
@@ -63,4 +63,4 @@
   <context:component-scan base-package="fun.bot4.**.repository"/>
   <jpa:repositories base-package="fun.bot4.**.repository"/>
 
-  </beans>
+</beans>
