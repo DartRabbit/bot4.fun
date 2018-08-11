@@ -7,7 +7,12 @@
   <groupId>fun.bot4</groupId>
   <artifactId>bot</artifactId>
   <version>1.0.0</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>bot-platform</module>
+    <module>bot-rules</module>
+  </modules>
 
   <name>Bot for Fun</name>
   <description>Multitype Bots Factory</description>
@@ -26,7 +31,7 @@
     <logback.version>1.2.3</logback.version>
     <slf4j.version>1.7.25</slf4j.version>
 
-    <start-class>fun.bot4.Application</start-class>
+    <start-class>bot4.Application</start-class>
   </properties>
 
   <parent>
@@ -129,8 +134,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
         </configuration>
       </plugin>
       <plugin>
